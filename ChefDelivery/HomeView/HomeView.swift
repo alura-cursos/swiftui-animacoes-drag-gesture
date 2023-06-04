@@ -47,7 +47,20 @@ struct HomeView: View {
                         .opacity(isAnimating ? 1 : 0)
                         .offset(y: isAnimating ? 0 : -40)
                     
-                    Spacer()
+                    Image("image")
+                      .resizable()
+                      .scaledToFit()
+                      .padding(32)
+                      .shadow(radius: 30)
+                      .gesture(
+                        DragGesture()
+                          .onChanged({ gesture in
+                            print(gesture.translation)
+                          })
+                          .onEnded({ _ in
+                            print("O usuário não está interagindo mais")
+                          })
+                      )
                 }
             }
         }
