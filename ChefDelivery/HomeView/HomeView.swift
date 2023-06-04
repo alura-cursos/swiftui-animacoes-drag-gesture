@@ -11,6 +11,7 @@ struct HomeView: View {
     
     @State private var isAnimating = false
     @State private var imageOffset: CGSize = .zero
+    let buttonHeight: CGFloat = 80
     
     var body: some View {
         GeometryReader { geometry in
@@ -67,6 +68,40 @@ struct HomeView: View {
                                     }
                                 })
                         )
+                    
+                    ZStack {
+                        Capsule()
+                            .fill(Color("ColorRed").opacity(0.2))
+                        
+                        Capsule()
+                            .fill(Color("ColorRed").opacity(0.2))
+                            .padding(8)
+                        
+                        Text("Descubra mais")
+                            .font(.title2)
+                            .bold()
+                            .foregroundColor(Color("ColorRedDark"))
+                            .offset(x: 20)
+                        
+                        HStack {
+                            ZStack {
+                                Circle()
+                                    .fill(Color("ColorRed"))
+                                
+                                Circle()
+                                    .fill(Color("ColorRedDark"))
+                                    .padding(8)
+                                
+                                Image(systemName: "chevron.right.2")
+                                    .font(.system(size: 24, weight: .bold))
+                                    .foregroundColor(.white)
+                            }
+                            
+                            Spacer()
+                        }
+                        
+                    }
+                    .frame(width: geometry.size.width - 60, height: buttonHeight)
                 }
             }
         }
