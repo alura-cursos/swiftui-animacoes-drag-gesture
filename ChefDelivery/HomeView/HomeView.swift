@@ -20,7 +20,7 @@ struct HomeView: View {
                 .opacity(isAnimating ? 1 : 0)
                 .offset(y: isAnimating ? 0 : -40)
             
-            Text("Peça as suas comidas no conforto da sua casa.")
+            Text("Peça as suas comidas favoritas no conforto da sua casa.")
                 .font(.title2)
                 .padding()
                 .multilineTextAlignment(.center)
