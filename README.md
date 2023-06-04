@@ -1,4 +1,5 @@
-![Thumbnail GitHub](https://github.com/giovannamoeller/swiftui-animacoes-drag-gesture/assets/47362960/a341ca66-ec71-410c-a242-22733c1878ba)
+![Thumbnail GitHub](https://github.com/giovannamoeller/swiftui-animacoes-drag-gesture/assets/47362960/aaf38524-2a93-4995-9cac-77ec3e5782c8)
+
 
 # ChefDelivery
 
