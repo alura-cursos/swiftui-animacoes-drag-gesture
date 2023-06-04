@@ -85,6 +85,14 @@ struct HomeView: View {
                             .offset(x: 20)
                         
                         HStack {
+                            Capsule()
+                                .fill(Color("ColorRed"))
+                                .frame(width: buttonOffset + buttonHeight)
+                            
+                            Spacer()
+                        }
+                        
+                        HStack {
                             ZStack {
                                 Circle()
                                     .fill(Color("ColorRed"))
@@ -104,13 +112,19 @@ struct HomeView: View {
                         .gesture(
                             DragGesture()
                                 .onChanged({ gesture in
-                                    withAnimation(.easeInOut(duration: 0.25)) {
-                                        buttonOffset = gesture.translation.width
+                                    if gesture.translation.width > 0 && buttonOffset <= (geometry.size.width - 60) - buttonHeight {
+                                        withAnimation(.easeInOut(duration: 0.25)) {
+                                            buttonOffset = gesture.translation.width
+                                        }
                                     }
                                 })
                                 .onEnded({ _ in
-                                    withAnimation(.easeInOut(duration: 0.25)) {
-                                        buttonOffset = 0
+                                    if buttonOffset > (geometry.size.width - 60) / 2 {
+                                        // Navegar para a próxima tela
+                                    } else {
+                                        withAnimation(.easeInOut(duration: 0.25)) {
+                                            buttonOffset = 0
+                                        }
                                     }
                                 })
                         )
