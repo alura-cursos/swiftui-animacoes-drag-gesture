@@ -49,20 +49,24 @@ struct HomeView: View {
                         .offset(y: isAnimating ? 0 : -40)
                     
                     Image("image")
-                      .resizable()
-                      .scaledToFit()
-                      .padding(32)
-                      .shadow(radius: 30)
-                      .offset(x: imageOffset.width, y: imageOffset.height)
-                      .gesture(
-                        DragGesture()
-                          .onChanged({ gesture in
-                              imageOffset = gesture.translation
-                          })
-                          .onEnded({ _ in
-                              imageOffset = .zero
-                          })
-                      )
+                        .resizable()
+                        .scaledToFit()
+                        .padding(32)
+                        .shadow(radius: 30)
+                        .offset(x: imageOffset.width, y: imageOffset.height)
+                        .gesture(
+                            DragGesture()
+                                .onChanged({ gesture in
+                                    withAnimation(.easeInOut(duration: 0.5)) {
+                                        imageOffset = gesture.translation
+                                    }
+                                })
+                                .onEnded({ _ in
+                                    withAnimation(.easeInOut(duration: 0.5)) {
+                                        imageOffset = .zero
+                                    }
+                                })
+                        )
                 }
             }
         }
