@@ -30,6 +30,7 @@
 		48A230D72A2C086000431A41 /* StoreDetailProductItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A230D62A2C086000431A41 /* StoreDetailProductItemView.swift */; };
 		48A230D92A2C097400431A41 /* ProductDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A230D82A2C097400431A41 /* ProductDetailHeaderView.swift */; };
 		48A230DB2A2C098000431A41 /* ProductDetailQuantityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A230DA2A2C098000431A41 /* ProductDetailQuantityView.swift */; };
+		48A230DE2A2C104400431A41 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A230DD2A2C104400431A41 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		48A230D62A2C086000431A41 /* StoreDetailProductItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDetailProductItemView.swift; sourceTree = "<group>"; };
 		48A230D82A2C097400431A41 /* ProductDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailHeaderView.swift; sourceTree = "<group>"; };
 		48A230DA2A2C098000431A41 /* ProductDetailQuantityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailQuantityView.swift; sourceTree = "<group>"; };
+		48A230DD2A2C104400431A41 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 		1828E78D2A151C6700B8A3C6 /* ChefDelivery */ = {
 			isa = PBXGroup;
 			children = (
+				48A230DC2A2C103A00431A41 /* HomeView */,
 				48A230CC2A2C021F00431A41 /* ProductDetailView */,
 				48A230C82A2C010500431A41 /* Extension */,
 				1828E7A12A15261400B8A3C6 /* App */,
@@ -196,6 +199,14 @@
 			path = StoreDetailView;
 			sourceTree = "<group>";
 		};
+		48A230DC2A2C103A00431A41 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				48A230DD2A2C104400431A41 /* HomeView.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -271,6 +282,7 @@
 				48A230D02A2C023E00431A41 /* ProductDetailView.swift in Sources */,
 				48A230C42A2BFC1B00431A41 /* ProductType.swift in Sources */,
 				180B33692A16635500C1AFBC /* CarouselItemView.swift in Sources */,
+				48A230DE2A2C104400431A41 /* HomeView.swift in Sources */,
 				1828E7912A151C6700B8A3C6 /* ContentView.swift in Sources */,
 				48A230DB2A2C098000431A41 /* ProductDetailQuantityView.swift in Sources */,
 				48A230CB2A2C011A00431A41 /* Double+.swift in Sources */,
